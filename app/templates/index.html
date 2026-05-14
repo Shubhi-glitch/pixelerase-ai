@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>>PixelErase AI</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>✨ >PixelErase AI</h1>
+
+        <p>Upload images & remove background instantly</p>
+
+        <!-- Upload Form -->
+        <form id="form">
+
+            <label class="upload" id="drop">
+
+                📁 Click or Drag Images Here
+
+                <input type="file" id="fileInput" multiple required>
+
+            </label>
+
+            <!-- File Info -->
+            <div class="file-info" id="fileInfo"></div>
+
+            <button type="submit">
+                🚀 Remove Background
+            </button>
+
+        </form>
+
+        <!-- Loader -->
+        <div class="loader" id="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container" id="progressContainer">
+
+            <div class="progress-bar" id="progressBar"></div>
+
+        </div>
+
+        <!-- Result -->
+        <div class="result-container" id="resultContainer"></div>
+
+        <!-- Format -->
+        <div class="format-options">
+
+            <select id="formatSelect">
+
+                <option value="png">PNG HD</option>
+
+                <option value="jpeg">JPG</option>
+
+                <option value="webp">WEBP</option>
+
+            </select>
+
+        </div>
+
+        <!-- Background Buttons -->
+        <div class="bg-options">
+
+            <button type="button" class="bg-btn" data-color="white">
+                White
+            </button>
+
+            <button type="button" class="bg-btn" data-color="black">
+                Black
+            </button>
+
+            <button type="button" class="bg-btn" data-color="#00c3ff">
+                Blue
+            </button>
+
+            <button type="button" class="bg-btn" data-color="transparent">
+                Transparent
+            </button>
+
+        </div>
+
+        <!-- Custom Background -->
+        <div class="custom-bg">
+
+            <label class="custom-upload">
+
+                🌄 Upload Custom Background
+
+                <input type="file" id="bgInput">
+
+            </label>
+
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+
+        ✅ Background Removed Successfully
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
