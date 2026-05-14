@@ -1,4 +1,6 @@
+
 venv/
 __pycache__/
 *.pyc
-uploads/
+database.db
+u2net.onnx
